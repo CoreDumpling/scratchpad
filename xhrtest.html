@@ -1,13 +1,12 @@
 <html>
 <script>
+document.domain = "github.com";
 xhr = new XMLHttpRequest();
-xhr.open('GET', 'xhrtest.json', true);
+xhr.open('GET', 'http://github.com/CoreDumpling', true);
 xhr.onreadystatechange = function(e) {
 	if (xhr.readyState === 4) {
 		if (xhr.status === 200) {
 			document.write(xhr.responseText);
-           	var data = JSON.parse(xhr.responseText);
-           	document.write("<br>" + data.foo + data.bar);
 	    }
 	}
 };
