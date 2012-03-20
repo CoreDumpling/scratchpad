@@ -1,0 +1,16 @@
+<html>
+<script>
+xhr = new XMLHttpRequest();
+xhr.open('GET', 'xhrtest.json', true);
+xhr.onreadystatechange = function(e) {
+	if (xhr.readyState === 4) {
+		if (xhr.status === 200) {
+			document.write(xhr.responseText);
+           	var data = JSON.parse(xhr.responseText);
+           	document.write("<br>" + data.foo + data.bar);
+	    }
+	}
+};
+xhr.send(null);
+</script>
+</html>
