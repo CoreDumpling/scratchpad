@@ -2,7 +2,7 @@
 <script>
 document.domain = "github.com";
 xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://github.com/CoreDumpling', true);
+xhr.open('GET', 'http://localhost:7920/cgi-bin/proxy', true);
 xhr.onreadystatechange = function(e) {
 	if (xhr.readyState === 4) {
 		if (xhr.status === 200) {
